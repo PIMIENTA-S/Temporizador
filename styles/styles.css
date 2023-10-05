@@ -1,0 +1,11 @@
+@import url(https://db.onlinewebfonts.com/c/6cd5748c62aa9714dc9e467be440a97a?family=Camber+W04+Medium);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Camber W04 Medium", sans-serif;
+}
