@@ -8,4 +8,80 @@
 
 body{
     font-family: "Camber W04 Medium", sans-serif;
+    background-image: url(/imagenes/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
 }
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contendor{
+}
+
+.header{
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.header .activo{
+    background-color: white;
+    color: black;
+}
+
+.contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 130px;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.contador p:nth-of-type(2){
+    position: relative;
+    top: -.4rem;
+    margin-inline: .3rem;
+
+}
+
+.inicio{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    padding: 5px 12px;
+    width: 130px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+a{
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    margin: 9px;
+    font-size: 30px;
+}
+
+#pomodoro, #work, #break{
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: 2px solid white;
+    margin: 3px;
+}
+
