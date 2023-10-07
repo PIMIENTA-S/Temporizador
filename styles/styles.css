@@ -22,9 +22,6 @@ main{
     height: 100vh;
 }
 
-.contendor{
-}
-
 .header{
     width: 300px;
     display: grid;
@@ -32,7 +29,13 @@ main{
     text-align: center;
 }
 
-.header .activo{
+.header p{
+    opacity: .8;
+    transition: 1s ease;
+}
+
+.header p.activo{
+    opacity: 1;
     background-color: white;
     color: black;
 }
@@ -67,6 +70,7 @@ button{
     font-weight: 700;
     font-size: medium;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 a{
