@@ -15,17 +15,20 @@ window.onload = () => {
 const iniciar = document.getElementById('start')
 let estado = 1
 let intervalo;
+let pause = false;
 
 iniciar.addEventListener('click', () => {
     if (estado === 1){
 
         iniciar.textContent = "pause";
-        segundos = 59;
+        tWork.classList.add('activo');
+        
+        if (!pause){
+            segundos = 59;
+            trabajoPasado = tiempoTrabajo - 1;
+            descansoPasado = tiempoDescanso - 1;
+        }
 
-        tWork.classList.add('activo')
-
-        trabajoPasado = tiempoTrabajo - 1;
-        descansoPasado = tiempoDescanso - 1;
 
         let cambio = 0;
 
@@ -61,10 +64,12 @@ iniciar.addEventListener('click', () => {
 
         intervalo = setInterval(cronometro, 1000)
         estado = 2
+        pause = false;
     } else {
         iniciar.textContent = "start";
         clearInterval(intervalo);
         estado = 1
+        pause = true
     }
 })
 
