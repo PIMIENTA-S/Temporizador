@@ -76,11 +76,12 @@ iniciar.addEventListener('click', () => {
 const resetear = document.getElementById('reset');
 resetear.addEventListener('click', () => {
     event.preventDefault();
-    clearInterval(intervalo)
+    clearInterval(intervalo);
     document.getElementById('minutos').innerHTML = tiempoTrabajo;
     document.getElementById('segundos').innerHTML = "00";
-    iniciar.textContent = "start"
-    estado = 1
+    iniciar.textContent = "start";
+    estado = 1;
+    segundos = 59;
     tWork.classList.remove('activo');
     tBreak.classList.remove('activo');
 })
