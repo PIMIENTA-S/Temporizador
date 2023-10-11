@@ -81,6 +81,7 @@ resetear.addEventListener('click', () => {
     document.getElementById('segundos').innerHTML = "00";
     iniciar.textContent = "start";
     estado = 1;
+    trabajoPasado = tiempoTrabajo;
     segundos = 59;
     tWork.classList.remove('activo');
     tBreak.classList.remove('activo');
