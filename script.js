@@ -82,6 +82,7 @@ resetear.addEventListener('click', () => {
     iniciar.textContent = "start";
     estado = 1;
     trabajoPasado = tiempoTrabajo;
+    descansoPasado = tiempoDescanso;
     segundos = 59;
     tWork.classList.remove('activo');
     tBreak.classList.remove('activo');
