@@ -4,7 +4,7 @@ const tBreak = document.getElementById('break');
 const tiempoTrabajo = 25;
 let tiempoDescanso = 5;
 
-let segundos = "00"
+let segundos = "00";
 
 window.onload = () => {
     document.getElementById('minutos').innerHTML = tiempoTrabajo;
@@ -13,7 +13,7 @@ window.onload = () => {
 }
 
 const iniciar = document.getElementById('start')
-let estado = 1
+let estado = 1;
 let intervalo;
 let pause = false;
 
@@ -36,7 +36,7 @@ iniciar.addEventListener('click', () => {
             document.getElementById('minutos').innerHTML = trabajoPasado;
             document.getElementById('segundos').innerHTML = segundos;
 
-            segundos -= 1
+            segundos -= 1;
 
             if (segundos === 0){
                 trabajoPasado -= 1;
@@ -44,17 +44,17 @@ iniciar.addEventListener('click', () => {
                 if (trabajoPasado === -1){
                     if (cambio % 2 === 0){
                         trabajoPasado = tiempoDescanso;
-                        cambio += 1
+                        cambio += 1;
 
                         tWork.classList.remove('activo');
-                        tBreak.classList.add('activo')
+                        tBreak.classList.add('activo');
 
                     } else {
                         trabajoPasado = tiempoTrabajo;
-                        cambio += 1
+                        cambio += 1;
 
                         tBreak.classList.remove('activo');
-                        tWork.classList.add('activo')
+                        tWork.classList.add('activo');
 
                     }
                 }
@@ -62,14 +62,14 @@ iniciar.addEventListener('click', () => {
 
         }
 
-        intervalo = setInterval(cronometro, 1000)
-        estado = 2
+        intervalo = setInterval(cronometro, 1000);
+        estado = 2;
         pause = false;
     } else {
         iniciar.textContent = "start";
         clearInterval(intervalo);
-        estado = 1
-        pause = true
+        estado = 1;
+        pause = true;
     }
 })
 
